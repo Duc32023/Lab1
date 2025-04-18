@@ -1,13 +1,30 @@
 import React from 'react';
-import { SafeAreaView, StatusBar } from 'react-native';
+import { SafeAreaView, StatusBar, View } from 'react-native';
 import Pokemon from './android/components/Pokemon';
+import DemoIcon from './buoi2/Demoicon';
+import { PaperProvider, Text } from 'react-native-paper';
+import DemoTheme from './buoi2/DemoTheme';
+import DemoAppBar from './buoi2/DemoAppbar';
 
-const App = () => {
+import { Image } from 'react-native';
+import Login from './exercise2/Login';
+import Register from './exercise2/Register';
+import ForgetPassword from './exercise2/ForgetPassword';
+
+const App = () => { 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar barStyle="default" />
-      <Pokemon />
-    </SafeAreaView>
+
+      // <DemoIcon/>
+      <PaperProvider>
+        {/* <Pokemon/> */}
+        {/* <DemoTheme/> */}
+        {/* <DemoAppBar/> */}
+        {/* <Login/> */}
+        {/* <Register/> */}
+        <ForgetPassword/>
+     
+
+      </PaperProvider>
   );
 };
 
