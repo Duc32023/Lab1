@@ -13,7 +13,7 @@ import ForgetPassword from './exercise2/ForgetPassword';
 
 const App = () => { 
   return (
-
+//chạy từng cái
       // <DemoIcon/>
       <PaperProvider>
         {/* <Pokemon/> */}
