@@ -1,17 +1,16 @@
 import React from 'react';
-import { SectionList, Text, View, StyleSheet, SafeAreaView
-} from 'react-native';
+import { SectionList, Text, View, StyleSheet, SafeAreaView } from 'react-native';
 
 const people = [
+  { name: { first: 'Quang', last: 'Đức' } },
   { name: { first: 'Gia', last: 'Huy' } },
-  { name: { first: 'Bảo', last: 'Long' } },
-  { name: { first: 'Ngọc', last: 'Lan' } },
-  { name: { first: 'Tuấn', last: 'Kiệt' } },
-  { name: { first: 'Thảo', last: 'Vy' } },
-  { name: { first: 'Hải', last: 'Đăng' } },
-  { name: { first: 'Phương', last: 'Anh' } },
-  { name: { first: 'Khánh', last: 'Linh' } },
-  { name: { first: 'Thiên', last: 'An' } },
+  { name: { first: 'Hoàng', last: 'Bảo' } },
+  { name: { first: 'Anh', last: 'Tuấn' } },
+  { name: { first: 'Quang', last: 'Cường' } },
+  { name: { first: 'Quang', last: 'Dũng' } },
+  { name: { first: 'Văn', last: 'Đức' } },
+  { name: { first: 'Hoàng', last: 'Anh' } },
+  { name: { first: 'Thị', last: 'Mẫn' } },
 ];
 
 const groupByLastName = (data) => {
@@ -31,7 +30,7 @@ const groupByLastName = (data) => {
 const Project8 = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.header}> Danh sách</Text>
+      <Text style={styles.header}>Danh sách</Text>
       <SectionList
         sections={groupByLastName(people)}
         keyExtractor={(item, index) => `${item.name.first}-${index}`}
@@ -56,38 +55,42 @@ export default Project8;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f0f4f8',
     paddingTop: 20,
   },
   header: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 10,
-    color: '#333',
+    marginBottom: 15,
+    color: '#3a3a3a',
   },
   sectionHeader: {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#dfe6e9',
     paddingHorizontal: 12,
     paddingVertical: 6,
+    borderTopWidth: 1,
+    borderTopColor: '#b2bec3',
   },
   sectionTitle: {
     fontWeight: 'bold',
-    fontSize: 16,
-    color: '#333',
+    fontSize: 18,
+    color: '#2d3436',
   },
   item: {
-    paddingVertical: 10,
+    paddingVertical: 12,
     paddingHorizontal: 16,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#ffffff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#dfe6e9',
   },
   name: {
     fontSize: 16,
-    color: '#222',
+    color: '#2d3436',
   },
   separator: {
     height: 1,
-    backgroundColor: '#ccc',
+    backgroundColor: '#dfe6e9',
     marginLeft: 16,
   },
 });
